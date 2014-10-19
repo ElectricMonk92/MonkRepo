@@ -1,0 +1,23 @@
+<h1>Listing events</h1>
+
+<%= link_to 'New article', new_event_path %>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Venue</th>
+    <th>DateTime</th>
+    <th>Cost</th>
+  </tr>
+ 
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.title %></td>
+      <td><%= event.description %></td>
+      <td><%= event.venue %></td><td>
+      <td><%= event.datetime %></td>
+      <td><%= event.cost %></td>
+    </tr>
+  <% end %>
+</table>
